@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'application.dart';
+import 'dependencies/dependencies.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,6 +13,7 @@ void main() {
     ],
   );
 
+  setupDependencies();
 
   runApp(
     const Application(),
