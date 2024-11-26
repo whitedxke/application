@@ -1,6 +1,6 @@
 # application.
 
-A new Flutter project.
+A new project.
 
 ## Getting Started.
 

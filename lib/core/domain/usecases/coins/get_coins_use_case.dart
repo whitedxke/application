@@ -2,13 +2,13 @@ import '../../entities/coin/coin.dart';
 import '../../repositories/coins/coins_repository.dart';
 
 class GetCoinsUseCase {
-  final CoinsRepository repository;
+  final CoinsRepository _coinsRepository;
 
-  GetCoinsUseCase(
-    this.repository,
-  );
+  GetCoinsUseCase({
+    required CoinsRepository coinsRepository,
+  }) : _coinsRepository = coinsRepository;
 
   Future<List<Coin>> call() async {
-    return await repository.getCoinsList();
+    return await _coinsRepository.getCoinsList();
   }
 }

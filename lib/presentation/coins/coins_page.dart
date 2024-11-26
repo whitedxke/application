@@ -13,7 +13,6 @@ class CoinsPage extends StatefulWidget {
 class _CoinsPageState extends State<CoinsPage> {
   @override
   void initState() {
-    // context.read<CoinsViewModel>().fetchCoinsList();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       context.read<CoinsViewModel>().fetchCoinsList();
     });

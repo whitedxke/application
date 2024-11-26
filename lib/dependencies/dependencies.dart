@@ -20,7 +20,7 @@ void setupDependencies() {
   getIt.registerLazySingleton<CoinsRepository>(
     () {
       return CoinsRepositoryImpl(
-        getIt<CoinGeckoAPIClient>(),
+        coinGeckoAPIClient: getIt<CoinGeckoAPIClient>(),
       );
     },
   );
@@ -29,7 +29,7 @@ void setupDependencies() {
   getIt.registerLazySingleton(
     () {
       return GetCoinsUseCase(
-        getIt<CoinsRepository>(),
+        coinsRepository: getIt<CoinsRepository>(),
       );
     },
   );
@@ -38,7 +38,7 @@ void setupDependencies() {
   getIt.registerFactory(
     () {
       return CoinsViewModel(
-        getIt<GetCoinsUseCase>(),
+        getCoinsUseCase: getIt<GetCoinsUseCase>(),
       );
     },
   );

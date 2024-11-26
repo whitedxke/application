@@ -4,11 +4,11 @@ import '../../core/domain/entities/coin/coin.dart';
 import '../../core/domain/usecases/coins/get_coins_use_case.dart';
 
 class CoinsViewModel extends ChangeNotifier {
-  final GetCoinsUseCase getCoinsUseCase;
+  final GetCoinsUseCase _getCoinsUseCase;
 
-  CoinsViewModel(
-    this.getCoinsUseCase,
-  );
+  CoinsViewModel({
+    required GetCoinsUseCase getCoinsUseCase,
+  }) : _getCoinsUseCase = getCoinsUseCase;
 
   List<Coin> _coins = [];
   List<Coin> get coins => _coins;
@@ -21,7 +21,7 @@ class CoinsViewModel extends ChangeNotifier {
     notifyListeners();
 
     try {
-      _coins = await getCoinsUseCase();
+      _coins = await _getCoinsUseCase();
     } finally {
       _isLoading = false;
       notifyListeners();
