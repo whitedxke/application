@@ -3,6 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/coins_bloc.dart';
 
+// Отдельная задача на то, чтобы реализовать дизайн экрана.
+// Так же, в рамках задачи:
+// 1. Навигация.
+// 2. Адаптация.
+
+
 class CoinsView extends StatelessWidget {
   const CoinsView({super.key});
 
