@@ -23,15 +23,6 @@ class CoinGeckoAPIClient {
         'Accept': 'application/json',
         'x-cg-demo-api-key': _baseCoinGeckoAPIKey,
       };
-
-    _dio.interceptors.add(
-      LogInterceptor(
-        responseHeader: false,
-        request: true,
-        requestBody: false,
-        responseBody: true,
-      ),
-    );
   }
 
   Future<Response> getResponse({

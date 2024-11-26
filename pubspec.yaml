@@ -14,10 +14,15 @@ dependencies:
 
   cupertino_icons: 1.0.8
 
+  # Network.
   dio: 5.7.0
   json_annotation: 4.9.0
-  provider: 6.1.2
+
+  # Dependecies.
   get_it: 8.0.2
+
+  # State Management.
+  provider: 6.1.2
 
 dev_dependencies:
   flutter_test:
@@ -25,6 +30,7 @@ dev_dependencies:
 
   flutter_lints: 4.0.0
 
+  # Network.
   build_runner: 2.4.13
   json_serializable: 6.9.0
 
