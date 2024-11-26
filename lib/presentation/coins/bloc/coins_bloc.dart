@@ -13,8 +13,10 @@ class CoinsBloc extends Bloc<CoinsEvent, CoinsState> {
   CoinsBloc({
     required GetCoinsUseCase getCoinsUseCase,
   })  : _getCoinsUseCase = getCoinsUseCase,
-      super(CoinsInitialState()) {
+        super(CoinsInitialState()) {
+
     on<FetchCoinsEvent>(_onFetchCoinsEvent);
+
   }
 
   Future<void> _onFetchCoinsEvent(
