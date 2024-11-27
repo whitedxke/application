@@ -3,6 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/domain/entities/coin/coin.dart';
 
+part 'coin_item.image.part.dart';
+part 'coin_item.title.part.dart';
+
 class CoinItemWidget extends StatelessWidget {
   final Coin _coin;
 
@@ -13,11 +16,10 @@ class CoinItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final price = _coin.price
-        .toStringAsFixed(
-          2,
-        )
-        .toString();
+    final image = _coin.image;
+    final name = _coin.name;
+    final symbol = _coin.symbol;
+    final price = _coin.price.toStringAsFixed(2).toString();
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
@@ -40,11 +42,11 @@ class CoinItemWidget extends StatelessWidget {
             Row(
               children: [
                 _buildCoinImageWidget(
-                  image: _coin.image,
+                  image: image,
                 ),
                 _buildCoinTitleWidget(
-                  name: _coin.name,
-                  symbol: _coin.symbol,
+                  name: name,
+                  symbol: symbol,
                 ),
               ],
             ),
@@ -59,68 +61,6 @@ class CoinItemWidget extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-
-  Widget _buildCoinImageWidget({
-    required String image,
-  }) {
-    return Padding(
-      padding: EdgeInsets.only(
-        right: 16.w,
-      ),
-      child: Container(
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          border: Border.all(
-            width: 1.h,
-            color: Colors.white60,
-          ),
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(
-            50.h,
-          ),
-          child: Image.network(
-            image,
-            height: 48.h,
-            width: 48.h,
-            fit: BoxFit.fill,
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildCoinTitleWidget({
-    required String name,
-    required String symbol,
-  }) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: EdgeInsets.only(
-            bottom: 4.h,
-          ),
-          child: Text(
-            name,
-            style: TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: 24.h,
-              color: Colors.white,
-            ),
-          ),
-        ),
-        Text(
-          symbol,
-          style: TextStyle(
-            fontWeight: FontWeight.w500,
-            fontSize: 16.h,
-            color: Colors.white,
-          ),
-        ),
-      ],
     );
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/domain/entities/coin/coin.dart';
 import '../../../core/utils/constraints.dart';
+import '../../widgets/base_state_widget.dart';
 import '../bloc/coins_bloc.dart';
 import 'widgets/coin_item_widget.dart';
 
