@@ -22,9 +22,12 @@ dependencies:
   get_it: 8.0.2
 
   # State Management.
-  flutter_bloc: ^8.1.6
-  bloc: ^8.1.4
-  equatable: ^2.0.7
+  flutter_bloc: 8.1.6
+  bloc: 8.1.4
+  equatable: 2.0.7
+
+  # Utils.
+  flutter_screenutil: 5.9.3
 
 dev_dependencies:
   flutter_test:
