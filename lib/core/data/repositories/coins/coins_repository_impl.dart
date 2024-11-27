@@ -11,6 +11,17 @@ class CoinsRepositoryImpl implements CoinsRepository {
     required CoinGeckoAPIClient coinGeckoAPIClient,
   }) : _coinGeckoAPIClient = coinGeckoAPIClient;
 
+  final List<String> _importantCoins = [
+    'Bitcoin',
+    'Ethereum',
+    'Solana',
+    'BNB',
+    'Celestia',
+    'OKB',
+    'Optimism',
+    'Oraichain',
+  ];
+
   @override
   Future<List<Coin>> getCoinsList() async {
     try {
@@ -21,7 +32,7 @@ class CoinsRepositoryImpl implements CoinsRepository {
         ).toJson(),
       );
       final List<dynamic> data = response.data;
-      return data.map((json) {
+      final list = data.map((json) {
         final coinDTO = ResponseCoinDTO.fromJson(
           json,
         );
@@ -29,6 +40,20 @@ class CoinsRepositoryImpl implements CoinsRepository {
           coinDTO,
         );
       }).toList();
+      final filteredCoins = list.where((coin) {
+        return _importantCoins.contains(
+          coin.name,
+        );
+      }).toList();
+      filteredCoins.sort((a, b) {
+        return _importantCoins.indexOf(a.name).compareTo(
+           _importantCoins.indexOf(
+             b.name,
+           ),
+        );
+      });
+
+      return filteredCoins;
     } catch (exception) {
       throw Exception(
         'Failed to load coins: $exception.',
