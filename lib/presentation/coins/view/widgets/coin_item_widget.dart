@@ -16,15 +16,9 @@ class CoinItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final image = _coin.image;
-    final name = _coin.name;
-    final symbol = _coin.symbol;
-    final price = _coin.price.toStringAsFixed(2).toString();
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(
-          16.r,
-        ),
+        borderRadius: BorderRadius.circular(16.r),
         border: Border.all(
           width: 1.h,
           color: Colors.white60,
@@ -42,16 +36,16 @@ class CoinItemWidget extends StatelessWidget {
             Row(
               children: [
                 _buildCoinImageWidget(
-                  image: image,
+                  image: _coin.image,
                 ),
                 _buildCoinTitleWidget(
-                  name: name,
-                  symbol: symbol,
+                  name: _coin.name,
+                  symbol: _coin.symbol,
                 ),
               ],
             ),
             Text(
-              price,
+              _coin.price.toStringAsFixed(2).toString(),
               style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 18.h,

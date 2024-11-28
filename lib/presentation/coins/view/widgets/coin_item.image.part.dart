@@ -4,9 +4,7 @@ Widget _buildCoinImageWidget({
   required String image,
 }) {
   return Padding(
-    padding: EdgeInsets.only(
-      right: 16.w,
-    ),
+    padding: EdgeInsets.only(right: 16.w),
     child: Container(
       decoration: BoxDecoration(
         shape: BoxShape.circle,
@@ -16,9 +14,7 @@ Widget _buildCoinImageWidget({
         ),
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(
-          50.h,
-        ),
+        borderRadius: BorderRadius.circular(50.h),
         child: Image.network(
           image,
           height: 48.h,

@@ -15,18 +15,14 @@ class BaseStateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 24.w,
-      ),
+      padding: EdgeInsets.symmetric(horizontal: 24.w),
       child: Align(
         alignment: Alignment.center,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: EdgeInsets.only(
-                bottom: 16.h,
-              ),
+              padding: EdgeInsets.only(bottom: 16.h),
               child: Icon(
                 _icon,
                 size: 48.h,

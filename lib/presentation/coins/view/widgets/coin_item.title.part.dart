@@ -8,9 +8,7 @@ Widget _buildCoinTitleWidget({
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Padding(
-        padding: EdgeInsets.only(
-          bottom: 4.h,
-        ),
+        padding: EdgeInsets.only(bottom: 4.h),
         child: Text(
           name,
           style: TextStyle(

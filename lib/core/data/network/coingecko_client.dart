@@ -12,12 +12,8 @@ class CoinGeckoAPIClient {
   CoinGeckoAPIClient() {
     _dio = Dio()
       ..options.baseUrl = _baseCoinGeckoUrl
-      ..options.connectTimeout = const Duration(
-        seconds: 10,
-      )
-      ..options.receiveTimeout = const Duration(
-        seconds: 10,
-      )
+      ..options.connectTimeout = const Duration(seconds: 10)
+      ..options.receiveTimeout = const Duration(seconds: 10)
       ..options.headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
