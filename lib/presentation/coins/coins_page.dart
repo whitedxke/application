@@ -13,7 +13,11 @@ class _CoinsPageState extends State<CoinsPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: CoinsView(),
+      backgroundColor: Colors.black,
+      body: SafeArea(
+        bottom: false,
+        child: CoinsView(),
+      ),
     );
   }
 }

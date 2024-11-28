@@ -17,7 +17,9 @@ class Coin {
     required this.price,
   });
 
-  factory Coin.fromDTO(ResponseCoinDTO dto) {
+  factory Coin.fromDTO({
+    required ResponseCoinDTO dto,
+  }) {
     return Coin(
       name: dto.name.orEmpty(),
       id: dto.id.orEmpty(),
