@@ -35,13 +35,13 @@ observer.dart                  // An observer of events.
 
 ## Screenshots.
 
-| !assets/screenshots/list.png | !assets/screenshots/empty.png | !assets/screenshots/error.png |
-|------------------------------|-------------------------------|-------------------------------|
-| **List**                     | **Empty**                     | **Error**                     |
+| ![List]assets/screenshots/list.png | ![Empty]assets/screenshots/empty.png | ![Error]assets/screenshots/error.png |
+|------------------------------------|--------------------------------------|--------------------------------------|
+| **List**                           | **Empty**                            | **Error**                            |
 
-| !assets/screenshots/loading.png |
-|---------------------------------|
-| **Loading**                     |
+| ![Loading]assets/screenshots/loading.png |
+|------------------------------------------|
+| **Loading**                              |
 
 ## Setup, and run.
 
