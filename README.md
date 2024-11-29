@@ -33,15 +33,15 @@ main.dart                      // Point of entry.
 observer.dart                  // An observer of events.
 ```
 
-## Screenshots.
+## Screenshots
 
-| ![List](assets/screenshots/list.png) | ![Empty](assets/screenshots/empty.png) | ![Error](assets/screenshots/error.png) |
-|--------------------------------------|----------------------------------------|----------------------------------------|
-| **List**                             | **Empty**                              | **Error**                              |
+| <img src="assets/screenshots/list.png" width="300" height="600" /> | <img src="assets/screenshots/empty.png" width="300" height="600" /> | <img src="assets/screenshots/error.png" width="300" height="600" /> |
+|--------------------------------------------------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------|
+| **List**                                                           | **Empty**                                                          | **Error**                                                           |
 
-| ![Loading](assets/screenshots/loading.png) |
-|--------------------------------------------|
-| **Loading**                                |
+| <img src="assets/screenshots/loading.png" width="300" height="600" /> |
+|---------------------------------------------------------------------|
+| **Loading**                                                         |
 
 ## Setup, and run.
 
