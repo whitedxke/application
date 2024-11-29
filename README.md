@@ -14,7 +14,23 @@ The application demonstrates a list of cryptocurrencies retrieved from the API, 
 ## The architecture of folders, and files.
 
 ```
-core/ │ ├── data/ // Data handling layer (APIs, models, repositories). ├── domain/ // Business logic (entities, interfaces, use cases). ├── utils/ // Utilities, and auxiliary functions. │ dependencies/ // Dependency management. │ presentation/ // UI-layer (widgets, pages, state management). │ ├── coins/ // Coin handling components. │ │ ├── bloc/ // State management logic. │ │ └── view/ // Widgets, and views. │ └── widgets/ // Common UI components. │ application.dart // Initialisation of the application. main.dart // Point of entry. observer.dart // An observer of events.
+core/
+│
+├── data/                      // Data handling layer (APIs, models, repositories).
+├── domain/                    // Business logic (entities, interfaces, use cases).
+├── utils/                     // Utilities, and auxiliary functions.
+│
+dependencies/                  // Dependency management.
+│
+presentation/                  // UI-layer (widgets, pages, state management).
+│   ├── coins/                 // Coin handling components.
+│   │   ├── bloc/              // State management logic.
+│   │   └── view/              // Widgets, and views.
+│   └── widgets/               // Common UI components.
+│
+application.dart               // Initialisation of the application.
+main.dart                      // Point of entry.
+observer.dart                  // An observer of events.
 ```
 
 ## Setup, and run.
