@@ -73,5 +73,5 @@ flutter build ios
 
 ## Documentation.
 
-For more information about **Clean Architecture**, read this article [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
-For more information about BLoC and its usage, visit the [official BLoC website](https://bloclibrary.dev/).
+- For more information about **Clean Architecture**, read this article [The Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html).
+- For more information about BLoC and its usage, visit the [official BLoC website](https://bloclibrary.dev/).
