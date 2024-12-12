@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/domain/entities/coin/coin.dart';
-import '../../widgets/base_state_widget.dart';
+import 'widgets/base_state_widget.dart';
 import '../bloc/coins_bloc.dart';
-import 'widgets/coin_item_widget.dart';
+import 'widgets/coin/coin_item_widget.dart';
 
 part 'coins_view.coin_list.part.dart';
 part 'coins_view.empty_state.part.dart';

@@ -3,13 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BaseStateWidget extends StatelessWidget {
   final String _message;
+  final Color _color;
   final IconData _icon;
 
   const BaseStateWidget({
     super.key,
     required String message,
+    required Color color,
     required IconData icon,
   })  : _message = message,
+        _color = color,
         _icon = icon;
 
   @override
@@ -26,7 +29,7 @@ class BaseStateWidget extends StatelessWidget {
               child: Icon(
                 _icon,
                 size: 48.h,
-                color: Colors.redAccent,
+                color: _color,
               ),
             ),
             Text(

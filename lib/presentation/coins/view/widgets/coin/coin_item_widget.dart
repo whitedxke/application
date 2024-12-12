@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../../core/domain/entities/coin/coin.dart';
+import '../../../../../core/domain/entities/coin/coin.dart';
 
 part 'coin_item.image.part.dart';
 part 'coin_item.title.part.dart';

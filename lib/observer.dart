@@ -17,9 +17,9 @@ class ApplicationBlocObserver extends BlocObserver {
 
   @override
   void onChange(
-      BlocBase bloc,
-      Change change,
-      ) {
+    BlocBase bloc,
+    Change change,
+  ) {
     if (kDebugMode) {
       print(
         'ApplicationBlocObserver. Change: $change.',
@@ -60,9 +60,9 @@ class ApplicationBlocObserver extends BlocObserver {
 
   @override
   void onEvent(
-      Bloc bloc,
-      Object? event,
-      ) {
+    Bloc bloc,
+    Object? event,
+  ) {
     if (kDebugMode) {
       print(
         'ApplicationBlocObserver. Event: $event.',
@@ -77,9 +77,9 @@ class ApplicationBlocObserver extends BlocObserver {
 
   @override
   void onTransition(
-      Bloc bloc,
-      Transition transition,
-      ) {
+    Bloc bloc,
+    Transition transition,
+  ) {
     if (kDebugMode) {
       print(
         'ApplicationBlocObserver. Transition: $transition.',
@@ -94,10 +94,10 @@ class ApplicationBlocObserver extends BlocObserver {
 
   @override
   void onError(
-      BlocBase bloc,
-      Object error,
-      StackTrace stackTrace,
-      ) {
+    BlocBase bloc,
+    Object error,
+    StackTrace stackTrace,
+  ) {
     if (kDebugMode) {
       print(
         'ApplicationBlocObserver. Error: $error.',
