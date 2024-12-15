@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/domain/entities/coin/coin.dart';
-import 'widgets/base_state_widget.dart';
 import '../bloc/coins_bloc.dart';
+import 'widgets/base_state_widget.dart';
 import 'widgets/coin/coin_item_widget.dart';
 
 part 'coins_view.coin_list.part.dart';
@@ -14,7 +14,12 @@ part 'coins_view.header.part.dart';
 part 'coins_view.loading_state.part.dart';
 
 class CoinsView extends StatefulWidget {
-  const CoinsView({super.key});
+  final CoinsProtocol _protocol;
+
+  const CoinsView({
+    super.key,
+    required CoinsProtocol protocol,
+  }) : _protocol = protocol;
 
   @override
   State<CoinsView> createState() => _CoinsViewState();
@@ -38,6 +43,7 @@ class _CoinsViewState extends State<CoinsView> {
                 SliverList(
                   delegate: _buildCoinsListWidget(
                     coins: state.coins,
+                    onTap: widget._protocol.onNavigateToDetails,
                   ),
                 )
               ],
@@ -50,4 +56,8 @@ class _CoinsViewState extends State<CoinsView> {
       },
     );
   }
+}
+
+abstract class CoinsProtocol {
+  void onNavigateToDetails(Coin coin);
 }

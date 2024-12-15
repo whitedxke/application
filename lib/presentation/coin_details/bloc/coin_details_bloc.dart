@@ -22,7 +22,7 @@ class CoinDetailsBloc extends Bloc<CoinDetailsEvent, CoinDetailsState> {
       );
     } catch (exception) {
       throw Exception(
-        'Exception: $Exception.',
+        'Exception: $exception.',
       );
     }
   }
