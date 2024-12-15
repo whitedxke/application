@@ -1,14 +1,14 @@
-part of 'details_bloc.dart';
+part of 'coin_details_bloc.dart';
 
-abstract class DetailsEvent extends Equatable {
+abstract class CoinDetailsEvent extends Equatable {
   @override
   List<Object?> get props => [];
 }
 
-class LoadDetailsEvent extends DetailsEvent {
+class LoadCoinDetailsEvent extends CoinDetailsEvent {
   final Coin _coin;
 
-  LoadDetailsEvent({
+  LoadCoinDetailsEvent({
     required Coin coin,
   }) : _coin = coin;
 
