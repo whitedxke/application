@@ -23,10 +23,12 @@ core/
 dependencies/                  // Dependency management.
 │
 presentation/                  // UI-layer (widgets, pages, state management).
-│   ├── coins/                 // Coin handling components.
-│   │   ├── bloc/              // State management logic.
-│   │   ├── view/              // Widgets, and views.
-│   │   └── page.dart 
+│   ├── coins/                 
+│   │   ├── bloc/              // State management logic.       
+│   │   └── view/
+│   ├── details/                 
+│   │   ├── bloc/              // State management logic.             
+│   │   └── view/ 
 │   └── widgets/               // Common UI components.
 │
 application.dart               // Initialisation of the application.
