@@ -26,10 +26,9 @@ presentation/                  // UI-layer (widgets, pages, state management).
 │   ├── coins/                 
 │   │   ├── bloc/              // State management logic.       
 │   │   └── view/
-│   ├── details/                 
-│   │   ├── bloc/              // State management logic.             
-│   │   └── view/ 
-│   └── widgets/               // Common UI components.
+│   └── details/                 
+│       ├── bloc/              // State management logic.             
+│       └── view/ 
 │
 application.dart               // Initialisation of the application.
 main.dart                      // Point of entry.

@@ -16,7 +16,6 @@ class CoinsBloc extends Bloc<CoinsEvent, CoinsState> {
         super(CoinsInitialState()) {
 
     on<FetchCoinsEvent>(_onFetchCoinsEvent);
-
   }
 
   Future<void> _onFetchCoinsEvent(
