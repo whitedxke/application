@@ -19,7 +19,7 @@ Widget _buildCoinTitleWidget({
         ),
       ),
       Text(
-        symbol,
+        symbol.toUpperCase(),
         style: TextStyle(
           fontWeight: FontWeight.w500,
           fontSize: 16.h,
